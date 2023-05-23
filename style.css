@@ -1,21 +1,44 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
+    padding-top: 0.1px;
+    position: relative;
+}
+
+/* COMMON */
+
+.separator {
+    width: 150px;
+    height: 1px;
+    background-color: black;
+}
+
+/* MAIN */
+
+.main-section-header {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .main {
     background-image: url("https://images.unsplash.com/photo-1483366774565-c783b9f70e2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
-    height: 100vh;
+    height: calc(100vh - 100px);
     background-repeat: no-repeat;
     color:  black;
     text-align: center;
     background-size: cover;
-}
 
-h1 {
-    padding-top: 40vh;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
 }
-
 
 .main-navigation {
     display: flex;
@@ -31,20 +54,133 @@ h1 {
    /* padding: 5px 10px; */
 }
 
+.main-navigation-item a {
+    color: black;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.main-navigation-item a:hover {
+    color: #bcbcbc;
+}
+
 .main-button {
     background-color: white;
-    border-width: 1px;
-    border-color: black;
-    padding-left: 15px;
-    padding-right: 15px;
+     border: 1px solid black;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 18px;
+    cursor: pointer;
+    transition: backraund-color 0.2s ease;
+}
+
+.main-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.main-button-inverted {
+    background-color: transparent;
+    color: black;
+    border-color: black;
+    border: 2px solid black;
+}
+
+.main-button-inverted:hover {
+    background-color: black;
+    color: white;
 }
 
 .main-header {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    width: 100%;
+    padding: 20px 0 20px 0;
+    background-color: white;
+    z-index: 10;
+    
+}
+
+/*ABOUT*/
+
+.about-section {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: auto;
+}
+.about-image {
+    width: 350px;
+    height: 500px;
+    border-radius: 15px;
+}
+
+.about-content {
+    max-width: 500px;
+}
+
+.checkmarks-bg {
+    background-color: #D9D9D9;
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    padding: 2px;
+    margin-right: 15px;
+}
+
+.checkmarks-row {
+    display: flex;
+    align-items: center;
+}
+
+.abut-us-button {
+    margin: auto;
+    display: block;
+    margin-top: 40px;
+}
+
+.up-button {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.151);
+    padding: 15px;
+    box-sizing: border-box;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid rgba(0, 0, 0, 0.203);
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+/* OUR LATEST PROJECTS */
+
+.our-latest-projects-section {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.our-latest-projects-image {
+    width: 350px;
+    height: 500px;
+    border-radius: 30px;
+}
+
+.our-latest-projects-content {
+    max-width: 500px;
+}
+
+.our-latest-projects-button {
+    margin: auto;
+    display: block;
+    margin-top: 40px;
 }
